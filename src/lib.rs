@@ -47,7 +47,7 @@ pub enum Piece {
 }
 
 impl Piece {
-    /// From https://www.chess.com/terms/chess-piece-value#whatareCPV
+    /// From <https://www.chess.com/terms/chess-piece-value#whatareCPV>
     pub fn value(&self) -> u8 {
         match self {
             Self::Pawn => 1,
