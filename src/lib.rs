@@ -1,7 +1,5 @@
-use core::{fmt, num};
-use std::cmp::Ordering;
+use core::fmt;
 use std::ops::{Index, IndexMut};
-use std::panic::AssertUnwindSafe;
 use std::str::FromStr;
 
 /// The error returned when a Fen String is not valid
@@ -9,12 +7,12 @@ use std::str::FromStr;
 pub struct FenParseError;
 
 pub struct GameState {
-    board: BoardState,
-    turn: Player,
-    castle_state: CastleState,
-    en_passant_square: EnPassantTarget,
-    halfmove_clock: u8,
-    fullmove_number: u16,
+    pub board: BoardState,
+    pub turn: Player,
+    pub castle_state: CastleState,
+    pub en_passant_square: EnPassantTarget,
+    pub halfmove_clock: u8,
+    pub fullmove_number: u16,
 }
 
 impl GameState {
